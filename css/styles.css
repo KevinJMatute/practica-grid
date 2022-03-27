@@ -71,7 +71,7 @@ body {
   background-color: var(--violet);
 }
 .card--dark-blue {
-  background-image: url("/assets/images/quotation-grey.svg");
+  background-image: url("../assets/images/quotation-grey.svg");
   background-color: var(--dark-blue);
 }
 .card--dark-blue,
