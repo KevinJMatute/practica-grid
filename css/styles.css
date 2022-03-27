@@ -26,14 +26,15 @@ header {
   color: var(--dark-blue);
 }
 
-
 /******************** General card styles ******************/
-
+.testimonials {
+  display: grid;
+  gap: 1.5rem;
+}
 .card {
   padding: 1.1rem;
   border-radius: 1rem;
   background-color: #fff;
-  margin-bottom: 1.5em;
 }
 .card__profile {
   display: flex;
@@ -66,20 +67,20 @@ header {
 
 /***************** card modifiers *********************/
 
-.card--bg-violet {
+.card--violet {
   background-image: url(/assets/images/quotation-violet.svg);
   background-color: var(--violet);
 }
-.card--bg-dark-blue {
+.card--dark-blue {
   background-image: url(/assets/images/quotation-grey.svg);
   background-color: var(--dark-blue);
 }
-.card--bg-dark-blue,
-.card--bg-violet {
+.card--dark-blue,
+.card--violet {
   background-repeat: no-repeat;
   background-position: 90% 5%;
 }
-.card--bg-grey {
+.card--grey {
   background-color: var(--grey);
 }
 .profile-picture--dark-blue {
@@ -95,21 +96,14 @@ header {
 /******************** Responsive *******************/
 
 @media screen and (min-width: 960px) {
-  .card {
-    height: auto;
-    margin-bottom: 0;
-  }
   .testimonials {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1.5rem;
   }
-  .card--bg-violet {
-    grid-column: 1 / span 2;
+  .card--violet {
+    grid-column: span 2;
   }
-  .card--bg-dark-blue {
-    grid-column: 2 / span 2;
+  .card--dark-blue {
+    grid-column: span 2;
   }
   .card--last {
     grid-column: 4;
