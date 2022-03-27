@@ -67,7 +67,7 @@ body {
 /***************** card modifiers *********************/
 
 .card--violet {
-  background-image: url("assets/images/quotation-violet.svg");
+  background-image: url("/assets/images/quotation-violet.svg");
   background-color: var(--violet);
 }
 .card--dark-blue {
