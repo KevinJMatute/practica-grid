@@ -8,11 +8,13 @@
   --light-gray: hsl(0, 0%, 81%);
   --light-blue: hsl(210, 46%, 95%);
 }
+/************** General styles *************/
 
 img {
   max-width: 100%;
 }
-p {
+p,
+h3 {
   margin: 0;
 }
 body {
@@ -22,7 +24,7 @@ body {
   background-color: var(--light-blue);
   color: var(--light-blue);
 }
-header {
+.title {
   color: var(--dark-blue);
 }
 
@@ -47,10 +49,6 @@ header {
   border: 2px solid var(--light-gray);
   transform: scale(0.8);
 }
-.card__name {
-  margin: 0;
-}
-
 .card__status {
   color: var(--light-gray);
 }
@@ -95,6 +93,25 @@ header {
 
 /******************** Responsive *******************/
 
+/********* Tablet*************/
+
+@media screen and (min-width: 720px) {
+  .testimonials {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card--violet {
+    grid-column: span 2;
+  }
+  .card--dark-blue {
+    grid-column: span 2;
+  }
+  .card:last-child {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+  }
+}
+/************ PC ***************/
+
 @media screen and (min-width: 960px) {
   .testimonials {
     grid-template-columns: repeat(4, 1fr);
@@ -105,7 +122,7 @@ header {
   .card--dark-blue {
     grid-column: span 2;
   }
-  .card--last {
+  .card:last-child {
     grid-column: 4;
     grid-row: 1 / span 2;
   }
